@@ -18,9 +18,8 @@ samples, guidance on mobile development, and a full API reference.
 <img src="https://user-images.githubusercontent.com/73518920/132402398-2d98732e-1f7d-40fd-9a01-24f469899f3b.mp4" height= "400" width ="300">
 
 
-<video width="320" height="400" controls>
+<video width="320" height="240" controls autoplay>
   <source src="https://user-images.githubusercontent.com/73518920/132402398-2d98732e-1f7d-40fd-9a01-24f469899f3b.mp4" type="video/mp4">
- 
- 
+
 </video>
 
