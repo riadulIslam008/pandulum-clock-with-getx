@@ -42,7 +42,7 @@ class ClockPainter extends CustomPainter {
     // ─── OUTLINED CIRCLE ─────────────────────────────────────────────
     //
     var outlinedPaint = Paint()
-      ..color = Color(0xFFEAECFF)
+      ..color = Color(0xFFEAECFF) //0xFFEAECFF
       ..style = PaintingStyle.stroke
       ..strokeWidth = 14;
     canvas.drawCircle(center, redius - 30, outlinedPaint);
@@ -78,8 +78,8 @@ class ClockPainter extends CustomPainter {
       ..strokeCap = StrokeCap.round
       ..strokeWidth = 7;
 
-    var minHandX = centerX + 50 * cos(_date.minute * pi / 180);
-    var minHandY = centerX + 70 * sin(_date.minute * pi / 180);
+    var minHandX = centerX + 50 * cos(_date.minute * 6 * pi / 180);
+    var minHandY = centerX + 50 * sin(_date.minute * 6 * pi / 180);
 //     canvas.drawLine(center,Offset(centerX-35 ,centerY+35),minBrush);
     canvas.drawLine(center, Offset(minHandX, minHandY), minBrush);
 

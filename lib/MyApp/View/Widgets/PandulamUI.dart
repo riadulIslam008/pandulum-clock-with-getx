@@ -7,7 +7,7 @@ class PandulamUI extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 220,
-      width: 300,
+   //   width: 300,
       child: Image.asset("images/pandulum.png"),
     );
   }

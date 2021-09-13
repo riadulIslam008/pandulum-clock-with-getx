@@ -15,6 +15,7 @@ class PandulamClock extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xFF202F41),
       body: Stack(
+        alignment: Alignment.center,
         children: [
           Column(
             children: [
@@ -25,8 +26,10 @@ class PandulamClock extends StatelessWidget {
                   return Transform(
                     alignment: FractionalOffset(0.5, 0.0),
                     transform: Matrix4.rotationZ(controller.animation.value),
-                    child: Container(
-                      child: PandulamUI(),
+                    child: Center(
+                      child: Container(
+                        child: PandulamUI(),
+                      ),
                     ),
                   );
                 },
@@ -37,11 +40,11 @@ class PandulamClock extends StatelessWidget {
 //
 // ─── THIS IS TIME SHOW SCETION  TRY TO COMMENT OUT THIS SCETION CZ UI IS NOT PERFECT
 //
-          Positioned(
-            top: Get.height / 2 - 73,
-            left: 83,
+          Center(
+            // top: Get.height / 2 - 73,
+            // left: 83,
             child: CircleAvatar(
-              backgroundColor: Colors.red,
+              backgroundColor: Color(0xFF202F41),
               radius: Get.width / 4 - 17,
               child: Stack(
                 children: [
@@ -67,13 +70,16 @@ class PandulamClock extends StatelessWidget {
               ),
             ),
           ),
-          Container(
-            alignment: FractionalOffset(0.1, 0.5),
-            child: GetBuilder<ClockController>(
-              init: ClockController(),
-              builder: (controller) {
-                return ClockUI();
-              },
+
+          Center(
+            child: Container(
+              alignment: FractionalOffset(0.5, 0.5),
+              child: GetBuilder<ClockController>(
+                init: ClockController(),
+                builder: (controller) {
+                  return ClockUI();
+                },
+              ),
             ),
           ),
         ],
